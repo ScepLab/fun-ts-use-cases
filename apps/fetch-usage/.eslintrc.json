@@ -1,0 +1,28 @@
+{
+    "root": true,
+    "extends": [
+        "custom",
+        "plugin:react-hooks/recommended",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "react"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        "react/prop-types": 0,
+        "react/display-name": 0,
+        "react/react-in-jsx-scope": "off"
+    }
+}

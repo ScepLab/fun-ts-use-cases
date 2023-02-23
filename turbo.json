@@ -1,0 +1,40 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "globalDependencies": [
+        "**/.env.*local"
+    ],
+    "pipeline": {
+        "check-cspell": {},
+        "polish": {
+            "dependsOn": [
+                "clean"
+            ]
+        },
+        "clean": {},
+        "build": {
+            "dependsOn": [
+                "clean",
+                "lint",
+                "check-cspell",
+                "^build"
+            ]
+        },
+        "test": {
+            "dependsOn": [
+                "lint",
+                "^build"
+            ]
+        },
+        "deploy": {
+            "dependsOn": [
+                "lint",
+                "^build",
+                "test"
+            ]
+        },
+        "lint": {},
+        "dev": {
+            "cache": false
+        }
+    }
+}

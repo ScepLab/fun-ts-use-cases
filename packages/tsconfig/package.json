@@ -1,0 +1,13 @@
+{
+    "name": "tsconfig",
+    "private": true,
+    "files": [
+        "base.json",
+        "react-library.json",
+        "react-vite.json"
+    ],
+    "scripts": {
+        "clean": "rm -rf ./dist",
+        "polish": "rm -rf .turbo && rm -rf ./node_modules && rm -rf ./dist"
+    }
+}
